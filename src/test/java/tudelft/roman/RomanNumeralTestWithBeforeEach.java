@@ -36,4 +36,14 @@ public class RomanNumeralTestWithBeforeEach {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+    @Test
+    public void largeNumberWithoutSubtractiveNotation() {
+        int result = roman.convert("MD");
+        Assertions.assertEquals(1500, result);
+    }
+    @Test
+    public void largeNumberWithSubtractiveNotation() {
+        int result = roman.convert("XMIX");
+        Assertions.assertEquals(999, result);
+    }
 }
